@@ -11,7 +11,7 @@ namespace Nexa.Adapter.Extensions
         {
             builder.Services.AddHttpClient<IBankDataApiService, BankDataApiService>(client =>
             {
-                client.BaseAddress = new Uri(builder.Configuration["BankBaseUrl"]);
+                client.BaseAddress = new Uri(builder.Configuration["BankDataApi:BaseUrl"]);
             }).AddPolicyHandler(GetRetryPolicy())
             .AddPolicyHandler(GetCircuitBreakerPolicy()); ;
         }
