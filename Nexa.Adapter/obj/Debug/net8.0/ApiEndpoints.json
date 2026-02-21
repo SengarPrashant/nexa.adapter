@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Nexa.Adapter.Controllers.InvestigationController",
+    "Method": "Analyze",
+    "RelativePath": "analyze",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Nexa.Adapter.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

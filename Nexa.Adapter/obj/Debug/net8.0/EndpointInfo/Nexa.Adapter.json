@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/analyze": {
+      "post": {
+        "tags": [
+          "Investigation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
