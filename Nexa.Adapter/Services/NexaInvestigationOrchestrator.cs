@@ -32,7 +32,7 @@ namespace Nexa.Adapter.Services
                 new LlmMessage { Role = Role.System, Content = prompt }
             };
             
-            var llmResponse = await _llmClient.CompleteChat(messages);
+            var llmResponse = await _llmClient.Analyze(messages);
 
             // 5️⃣ Merge structured + narrative output
             var response = MergeResults(analyticalResult, llmResponse);
