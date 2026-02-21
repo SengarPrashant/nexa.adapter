@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using Nexa.Adapter.Configuration;
 using Nexa.Adapter.Models;
@@ -38,7 +39,6 @@ namespace Nexa.Adapter.Services
     public class BankDataApiService : IBankDataApiService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _bankApiBaseUrl;
         private readonly ILogger<BankDataApiService> _logger;
 
         public BankDataApiService(
@@ -47,40 +47,42 @@ namespace Nexa.Adapter.Services
             ILogger<BankDataApiService> logger)
         {
             _httpClient = httpClient;
-            _bankApiBaseUrl = bankDataApiOptions.Value.BankBaseurl;
+            _httpClient.BaseAddress = new Uri(bankDataApiOptions.Value.BaseUrl);
+            _httpClient.DefaultRequestHeaders.Add(
+            HeaderNames.Accept, "application/json");
             _logger = logger;
         }
 
         // ALERTS
 
         public async Task<IList<Alert>> GetAlertsAsync()
-            => await GetBankApiResponse<List<Alert>>($"{_bankApiBaseUrl}/alerts");
+            => await GetBankApiResponse<List<Alert>>($"/alerts");
 
         public async Task<Alert?> GetAlertByIdAsync(int id)
-            => await GetBankApiResponse<Alert>($"{_bankApiBaseUrl}/alerts/{id}");
+            => await GetBankApiResponse<Alert>($"/alerts/{id}");
 
         public async Task<IList<Alert>> GetAlertsBySeverityAsync(string severity)
             => await GetBankApiResponse<List<Alert>>(
-                $"{_bankApiBaseUrl}/alerts/by-severity/{severity}");
+                $"/alerts/by-severity/{severity}");
 
         public async Task<IList<Alert>> GetAlertsByCustomerIdAsync(int customerId)
             => await GetBankApiResponse<List<Alert>>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/alerts");
+                $"/customers/{customerId}/alerts");
 
 
         //CRM INSIGHTS
 
         public async Task<IList<object>> GetCrmInsightsAsync()
             => await GetBankApiResponse<List<object>>(
-                $"{_bankApiBaseUrl}/crm-insights");
+                $"/crm-insights");
 
         public async Task<IList<object>> GetCrmInsightsByCustomerIdAsync(int customerId)
             => await GetBankApiResponse<List<object>>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/crm-insights");
+                $"/customers/{customerId}/crm-insights");
 
         public async Task<IList<object>> GetHighPriorityCrmInsightsAsync()
             => await GetBankApiResponse<List<object>>(
-                $"{_bankApiBaseUrl}/crm-insights/high-priority");
+                $"/crm-insights/high-priority");
 
 
 
@@ -88,11 +90,11 @@ namespace Nexa.Adapter.Services
 
         public async Task<IList<CustomerProfile>> GetCustomerProfilesAsync()
             => await GetBankApiResponse<List<CustomerProfile>>(
-                $"{_bankApiBaseUrl}/customers/profiles");
+                $"/customers/profiles");
 
         public async Task<CustomerProfile?> GetCustomerProfileByCustomerIdAsync(int customerId)
             => await GetBankApiResponse<CustomerProfile>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/profile");
+                $"/customers/{customerId}/profile");
 
 
 
@@ -101,11 +103,11 @@ namespace Nexa.Adapter.Services
 
         public async Task<IList<CustomerBehaviourProfile>> GetCustomerBehaviourProfilesAsync()
             => await GetBankApiResponse<List<CustomerBehaviourProfile>>(
-                $"{_bankApiBaseUrl}/customers/behaviours");
+                $"/customers/behaviours");
 
         public async Task<CustomerBehaviourProfile?> GetCustomerBehaviourProfileByCustomerIdAsync(int customerId)
             => await GetBankApiResponse<CustomerBehaviourProfile>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/behaviour");
+                $"/customers/{customerId}/behaviour");
 
 
 
@@ -113,15 +115,15 @@ namespace Nexa.Adapter.Services
 
         public async Task<IList<Transaction>> GetTransactionsAsync()
             => await GetBankApiResponse<List<Transaction>>(
-                $"{_bankApiBaseUrl}/transactions");
+                $"/transactions");
 
         public async Task<IList<Transaction>> GetTransactionsByCustomerIdAsync(int customerId)
             => await GetBankApiResponse<List<Transaction>>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/transactions");
+                $"/customers/{customerId}/transactions");
 
         public async Task<IList<Transaction>> GetTransactionsByStatusAsync(string status)
             => await GetBankApiResponse<List<Transaction>>(
-                $"{_bankApiBaseUrl}/transactions/by-status/{status}");
+                $"/transactions/by-status/{status}");
 
 
 
@@ -129,7 +131,7 @@ namespace Nexa.Adapter.Services
 
         public async Task<object> GetCustomerRiskSummaryAsync(int customerId)
             => await GetBankApiResponse<object>(
-                $"{_bankApiBaseUrl}/customers/{customerId}/risk-summary");
+                $"/customers/{customerId}/risk-summary");
 
 
 

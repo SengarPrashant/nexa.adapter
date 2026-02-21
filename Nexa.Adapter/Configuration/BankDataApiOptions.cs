@@ -18,6 +18,6 @@
         /// <summary>
         /// 
         /// </summary>
-        public string BankBaseurl { get; set; } = default!;
+        public string BaseUrl { get; set; } = default!;
     }
 }
