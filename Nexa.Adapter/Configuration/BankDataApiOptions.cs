@@ -5,7 +5,7 @@
         /// <summary>
         /// config section name
         /// </summary>
-        public const string configSectionName = "bankAPI";
+        public const string configSectionName = "BankDataApi";
         /// <summary>
         /// Bank Api client id
         /// </summary>
