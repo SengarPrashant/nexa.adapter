@@ -1,4 +1,5 @@
 using Nexa.Adapter.Configuration;
+using Nexa.Adapter.Extensions;
 using Nexa.Adapter.Infrastructure.LLM;
 using Nexa.Adapter.Middleware;
 using Nexa.Adapter.Models;
@@ -19,6 +20,7 @@ builder.Services.AddSingleton<IAnalyticalEngine, AnalyticalEngine>();
 builder.Services.AddTransient<IBankDataAggregator,  BankDataAggregator>();
 builder.Services.AddTransient<IInvestigationOrchestrator, NexaInvestigationOrchestrator>();
 
+builder.AddBankDataApiService();
 builder.Services.AddMemoryCache();
 
 builder.Services.AddCors(options =>
@@ -39,6 +41,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<LLMOptions>(builder.Configuration.GetSection("LLM"));
+builder.Services.Configure<BankDataApiOptions>(builder.Configuration.GetSection(BankDataApiOptions.configSectionName));
 
 LLMProviderFactory.Register(builder.Services, builder.Configuration);
 
