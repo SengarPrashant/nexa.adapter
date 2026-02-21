@@ -6,17 +6,16 @@ namespace Nexa.Adapter.Extensions
 {
     public static class ServiceExtensions
     {
-        extension(WebApplicationBuilder builder)
+
+        public static void AddBankDataApiService(this WebApplicationBuilder builder)
         {
-            public void AddBankDataApiService()
+            builder.Services.AddHttpClient<IBankDataApiService, BankDataApiService>(client =>
             {
-                builder.Services.AddHttpClient<IBankDataApiService, BankDataApiService>(client =>
-                {
-                    client.BaseAddress = new Uri(builder.Configuration["BankBaseUrl"]);
-                }).AddPolicyHandler(GetRetryPolicy())
-                .AddPolicyHandler(GetCircuitBreakerPolicy()); ;
-            }
+                client.BaseAddress = new Uri(builder.Configuration["BankBaseUrl"]);
+            }).AddPolicyHandler(GetRetryPolicy())
+            .AddPolicyHandler(GetCircuitBreakerPolicy()); ;
         }
+
 
         static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
         {
