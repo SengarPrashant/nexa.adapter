@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Nexa.Adapter.Models;
 using Nexa.Adapter.Services;
 
 namespace Nexa.Adapter.Controllers
@@ -10,11 +10,11 @@ namespace Nexa.Adapter.Controllers
     {
         private readonly IInvestigationOrchestrator _investigationOrchestrator= investigationOrchestrator;
 
-        [HttpPost("/analyze")]
-        public async Task<IActionResult> Analyze()
+        [HttpPost("analyze")]
+        public async Task<IActionResult> Analyze(Alert alert)
         {
-            var result = _investigationOrchestrator.AnalyzeAsync(new Models.Alert() { Id = 1, CustomerId = 9935 });
-            return Ok();
+            var result = await _investigationOrchestrator.AnalyzeAsync(new Alert() { Id = 1, CustomerId = 9935 });
+            return Ok(result);
         }
     }
 }

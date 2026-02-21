@@ -4,7 +4,11 @@ using Nexa.Adapter.Models;
 
 namespace Nexa.Adapter.Services
 {
-    public class ChatService(IMemoryCache memoryCache, ILLMProvider llmProvider, ILLMResponseParser responseParser, IPromptBuilder promptBuilder)
+    public interface IChatService
+    {
+        public Task<NexaLlmResponse> ProcessChat(ChatRequest chat);
+    }
+    public class ChatService(IMemoryCache memoryCache, ILLMProvider llmProvider, ILLMResponseParser responseParser, IPromptBuilder promptBuilder): IChatService
     {
         private readonly IMemoryCache _cache=memoryCache;
         private readonly ILLMProvider _llmProvider = llmProvider;

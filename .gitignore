@@ -4,3 +4,6 @@ Nexa.Adapter/.vs/Nexa.Adapter/FileContentIndex/260b8bbc-7fd1-49e2-883e-976357d6f
 /Nexa.Adapter/bin
 bin
 obj
+/Nexa.Adapter/obj
+/Nexa.Adapter/obj/Debug
+/Nexa.Adapter/obj/Debug/net8.0

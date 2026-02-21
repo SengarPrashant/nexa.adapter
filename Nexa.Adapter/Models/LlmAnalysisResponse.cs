@@ -71,5 +71,4 @@ namespace Nexa.Adapter.Models
         public LlmAnalysisResponse Raw { get; set; }
     }
 
-
 }
