@@ -24,7 +24,7 @@ namespace Nexa.Adapter.Services
             var analyticalResult = _analyticalEngine.Analyze(context);
 
             // 3️⃣ Build prompt
-            var prompt = _promptBuilder.Build(context, analyticalResult);
+            var prompt = _promptBuilder.BuildAnalyticalPrompt(context, analyticalResult);
 
             // 4️⃣ Call LLM
             var messages = new List<LlmMessage>
@@ -69,7 +69,9 @@ namespace Nexa.Adapter.Services
                 RecommendedAction = llm?.RecommendedAction ?? BuildFallbackAction(analyticalResult),
 
                 ConfidenceJustification = llm?.Confidence?.Justification
-                                          ?? BuildFallbackConfidenceStatement(analyticalResult)
+                                          ?? BuildFallbackConfidenceStatement(analyticalResult),
+                Raw=llm
+
             };
 
             // 🚨 Governance Shield — detect contradictions

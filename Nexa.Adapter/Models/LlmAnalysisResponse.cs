@@ -66,6 +66,9 @@ namespace Nexa.Adapter.Models
 
         // Governance
         public string ConfidenceJustification { get; set; }
+
+        //
+        public LlmAnalysisResponse Raw { get; set; }
     }
 
 

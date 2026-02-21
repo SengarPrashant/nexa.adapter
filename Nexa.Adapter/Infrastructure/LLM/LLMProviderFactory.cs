@@ -10,6 +10,7 @@
             {
                 case "Bedrock":
                     services.AddSingleton<ILLMProvider, BedrockProvider>();
+                    services.AddSingleton<ILLMResponseParser, AwsResponseParser>();
                     break;
 
                 case "Azure":

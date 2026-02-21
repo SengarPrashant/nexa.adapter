@@ -4,8 +4,8 @@ namespace Nexa.Adapter.Infrastructure.LLM
 {
     public interface ILLMProvider
     {
-       // Task<LlmAnalysisResponse> Analyze(string prompt);
-        Task<LlmAnalysisResponse> CompleteChat(List<LlmMessage> messages);
+        Task<LlmAnalysisResponse> Analyze(List<LlmMessage> messages);
+        Task<string> CompleteChat(List<LlmMessage> messages);
     }
 
     public class LlmMessage
@@ -18,5 +18,8 @@ namespace Nexa.Adapter.Infrastructure.LLM
         User,
         Assistant
     }
-
+    public interface ILLMResponseParser
+    {
+        NexaLlmResponse Parse(string rawResponse);
+    }
 }

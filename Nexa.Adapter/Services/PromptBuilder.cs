@@ -4,11 +4,12 @@ namespace Nexa.Adapter.Services
 {
     public interface IPromptBuilder
     {
-        string Build(AlertInvestigationContext context, AnalyticalResult analysis);
+        string BuildAnalyticalPrompt(AlertInvestigationContext context, AnalyticalResult analysis);
+        string BuildFollowUpPrompt(InvestigationResponse investigation);
     }
     public class DefaultPromptBuilder: IPromptBuilder
     {
-        public string Build(AlertInvestigationContext context, AnalyticalResult analysis)
+        public string BuildAnalyticalPrompt(AlertInvestigationContext context, AnalyticalResult analysis)
         {
             var e = analysis.Evidence;
             return $@"
@@ -103,6 +104,72 @@ namespace Nexa.Adapter.Services
                         }}
 
                     ";
+        }
+        public string BuildFollowUpPrompt(InvestigationResponse investigation)
+        {
+            return $@"
+                    SYSTEM ROLE:
+                    You are a senior banking risk analyst assistant operating in regulated investigation mode.
+
+                    STRICT RULES:
+                    - DO NOT invent facts
+                    - USE ONLY provided investigation data
+                    - DO NOT modify deterministic scores
+                    - If uncertain, explicitly state limitations
+                    - Provide compliance-grade reasoning
+                    - Avoid conversational tone
+                    - Responses must remain audit-safe
+
+                    INVESTIGATION CONTEXT:
+                    - InvestigationId: {investigation.InvestigationId}
+                    - AnalysisTimestamp: {investigation.AnalysisTimestamp}
+
+                    DETERMINISTIC ANALYTICAL RESULTS:
+                    - False Positive Score: {investigation.FalsePositiveScore}
+                    - False Positive Likelihood: {investigation.FalsePositiveLikelihood}
+                    - Confidence Score: {investigation.ConfidenceScore}
+
+                    EVIDENCE SIGNALS:
+                    - Transaction Pattern Consistency: {investigation.Evidence?.TransactionPatternConsistency}
+                    - Historical Behavior Alignment: {investigation.Evidence?.HistoricalBehaviorAlignment}
+                    - Beneficiary Risk: {investigation.Evidence?.BeneficiaryRisk}
+                    - Velocity Anomaly: {investigation.Evidence?.VelocityAnomaly}
+                    - New Beneficiary Indicator: {investigation.Evidence?.EvaluateNewBeneficiary}
+
+                    PRIOR ANALYTICAL NARRATIVE:
+                    Summary:
+                    {investigation.NarrativeSummary}
+
+                    BEHAVIOURAL COMPARISON:
+                    - Amount Deviation: {investigation.BehaviouralComparison?.AmountDeviation}
+                    - Channel Consistency: {investigation.BehaviouralComparison?.ChannelConsistency}
+                    - Activity Consistency: {investigation.BehaviouralComparison?.ActivityConsistency}
+
+                    KNOWN CONTRADICTIONS:
+                    {FormatContradictions(investigation.Contradictions)}
+
+                    RECOMMENDED ACTION:
+                    - Action: {investigation.RecommendedAction?.Action}
+                    - Rationale: {investigation.RecommendedAction?.Rationale}
+
+                    TASK:
+                    Provide a regulatory-safe analytical response addressing the analyst question.
+
+                    OUTPUT FORMAT (MANDATORY JSON):
+                    {{
+                      ""responseType"": ""Clarification | RiskAssessment | EvidenceExpansion | LimitationStatement | CaseNoteGenerated | General"",
+                      ""response"": ""string"",
+                      ""evidenceReference"": [""string""],
+                      ""confidenceStatement"": ""string""
+                    }}
+                    ";
+        }
+        private string FormatContradictions(List<string> contradictions)
+        {
+            if (contradictions == null || contradictions.Count == 0)
+                return "None";
+
+            return string.Join("\n- ", contradictions);
         }
 
     }
