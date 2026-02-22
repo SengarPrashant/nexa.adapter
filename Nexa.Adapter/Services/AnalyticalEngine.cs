@@ -31,13 +31,7 @@ namespace Nexa.Adapter.Services
         }
     }
 
-    public enum EvidenceStrength
-    {
-        None = 0,
-        Weak = 1,
-        Moderate = 2,
-        Strong = 3
-    }
+    public enum EvidenceStrength { None = 0, Weak = 1, Moderate = 2, Strong = 3 }
 
     public enum RiskLevel
     {
