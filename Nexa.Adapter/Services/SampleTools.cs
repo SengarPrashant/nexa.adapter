@@ -50,4 +50,70 @@ namespace Nexa.Adapter.Services
             return Task.FromResult(new ToolResult { ToolName = Name, Output = output });
         }
     }
+
+    public class FetchUrlContentTool : ITool
+    {
+        private static readonly HttpClient _httpClient = new HttpClient
+        {
+            Timeout = TimeSpan.FromSeconds(30)
+        };
+
+        public string Name => "FetchUrlContent";
+
+        public string Description =>
+            "Fetch data from a public URL using HTTP GET. " +
+            "Use this tool whenever the user provides a URL and asks to fetch, call, retrieve, or get data from it. " +
+            "Required args: { \"url\": \"full https url\" }. " +
+            "Example: user says 'fetch data from https://example.com/api'.";
+
+        public async Task<ToolResult> ExecuteAsync(ToolCall call)
+        {
+            try
+            {
+                var url = call?.Args?.ContainsKey("url") == true
+                    ? call.Args["url"]
+                    : null;
+
+                if (string.IsNullOrWhiteSpace(url))
+                    return Error("URL is required.");
+
+                if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+                    return Error("Invalid URL.");
+
+                var response = await _httpClient.GetAsync(uri);
+                var content = await response.Content.ReadAsStringAsync();
+
+                return new ToolResult
+                {
+                    ToolName = Name,
+                    Output = JsonSerializer.Serialize(new
+                    {
+                        success = response.IsSuccessStatusCode,
+                        statusCode = (int)response.StatusCode,
+                        url,
+                        data = TryParseJson(content)
+                    })
+                };
+            }
+            catch (Exception ex)
+            {
+                return Error(ex.Message);
+            }
+        }
+
+        private static object TryParseJson(string content)
+        {
+            try { return JsonSerializer.Deserialize<object>(content); }
+            catch { return content; }
+        }
+
+        private static ToolResult Error(string message)
+        {
+            return new ToolResult
+            {
+                ToolName = "FetchUrlContent",
+                Output = JsonSerializer.Serialize(new { success = false, error = message })
+            };
+        }
+    }
 }

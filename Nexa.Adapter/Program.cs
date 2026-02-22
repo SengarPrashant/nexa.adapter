@@ -49,6 +49,7 @@ LLMProviderFactory.Register(builder.Services, builder.Configuration);
 builder.Services.AddSingleton<ITool, AccountLookupTool>();
 builder.Services.AddSingleton<ITool, TransactionSearchTool>();
 builder.Services.AddSingleton<ITool, WeatherTool>();
+builder.Services.AddSingleton<ITool, FetchUrlContentTool >();
 
 var app = builder.Build();
 
