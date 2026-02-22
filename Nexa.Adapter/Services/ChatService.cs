@@ -18,7 +18,7 @@ namespace Nexa.Adapter.Services
         {
             try
             {
-                var historyFound = _cache.TryGetValue<List<LlmMessage>>(chat.SessionId, out var result);
+                var historyFound = string.IsNullOrEmpty(chat.SessionId) ? false : _cache.TryGetValue<List<LlmMessage>>(chat.SessionId.Trim(), out var result);
                 var message = new List<LlmMessage>();
                 if (!historyFound)
                 {
@@ -28,8 +28,8 @@ namespace Nexa.Adapter.Services
                 message.Add(new LlmMessage { Role = Role.User, Content = chat.Content });
                 var AiResponse = await _llmProvider.CompleteChat(message);
 
-                var nexaResponse = _llmParser.Parse(AiResponse);
-
+                var nexaResponse = _llmParser.Parse<NexaLlmResponse>(AiResponse);
+                nexaResponse.SessionId = string.IsNullOrEmpty(chat.SessionId) ? Guid.NewGuid().ToString() : chat.SessionId.Trim();
                 return nexaResponse;
             }
             catch (Exception ex)

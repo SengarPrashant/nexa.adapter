@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexa.Adapter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1785ae64f83c1933c002d01f36e7006e54ad0e79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+579dd88bd93a95c6cb6a7d15fe37a58396846677")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexa.Adapter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexa.Adapter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddTransient<IPromptBuilder, DefaultPromptBuilder>();
-
+builder.Services.AddTransient<IChatService, ChatService>();
 builder.Services.AddSingleton<IFalsePositiveFramework, FalsePositiveFramework>();
 builder.Services.AddSingleton<IEvidenceWeightingEngine, EvidenceWeightingEngine>();
 builder.Services.AddSingleton<IConfidenceScoreEngine, ConfidenceScoreEngine>();
