@@ -162,8 +162,11 @@ namespace Nexa.Adapter.Services
                       ""evidenceReference"": [""string""],
                       ""confidenceStatement"": ""string""
                     }}
+                    You are a senior banking risk analyst assistant. Respond ONLY with a JSON object matching this schema:
+                    {{ ... , ToolsToCall: [{{ ToolName: string, Args: {{ key: value }} }}] }}
+                    If no tools are needed, return ToolsToCall: [].
                     ";
-        }
+        }    
         private string FormatContradictions(List<string> contradictions)
         {
             if (contradictions == null || contradictions.Count == 0)

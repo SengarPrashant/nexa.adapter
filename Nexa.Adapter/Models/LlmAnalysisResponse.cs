@@ -17,6 +17,8 @@ namespace Nexa.Adapter.Models
         public RecommendedAction RecommendedAction { get; set; }
 
         public ConfidenceBlock Confidence { get; set; }
+
+        public List<ToolCall> ToolsToCall { get; set; } = new();
     }
 
     public class EvidenceMatrixItem
