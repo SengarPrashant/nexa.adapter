@@ -1,12 +1,34 @@
 [
   {
+    "ContainingType": "Nexa.Adapter.Controllers.ChatController",
+    "Method": "Complete",
+    "RelativePath": "api/nexa/Chat/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nexa.Adapter.Models.ChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Nexa.Adapter.Controllers.InvestigationController",
     "Method": "Analyze",
     "RelativePath": "api/v1/nexa/Investigation/analyze",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "alert",
+        "Type": "Nexa.Adapter.Models.Alert",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

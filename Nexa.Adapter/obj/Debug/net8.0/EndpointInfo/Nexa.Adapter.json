@@ -5,11 +5,61 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/nexa/Chat/complete": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/nexa/Investigation/analyze": {
       "post": {
         "tags": [
           "Investigation"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Alert"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Alert"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Alert"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -18,5 +68,308 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "Alert": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "alertCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isVelocityAnomaly": {
+            "type": "boolean"
+          },
+          "alertType": {
+            "type": "string",
+            "nullable": true
+          },
+          "alertSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "severity": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "alertTimeStamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskScore": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignedTo": {
+            "type": "string",
+            "nullable": true
+          },
+          "resolutionReason": {
+            "type": "string",
+            "nullable": true
+          },
+          "alertResolutionTimeStamp": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BehaviouralComparison": {
+        "type": "object",
+        "properties": {
+          "amountDeviation": {
+            "type": "string",
+            "nullable": true
+          },
+          "channelConsistency": {
+            "type": "string",
+            "nullable": true
+          },
+          "activityConsistency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChatRequest": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "initialContext": {
+            "$ref": "#/components/schemas/InvestigationResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfidenceBlock": {
+        "type": "object",
+        "properties": {
+          "score": {
+            "type": "number",
+            "format": "double"
+          },
+          "justification": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvidenceMatrixItem": {
+        "type": "object",
+        "properties": {
+          "signal": {
+            "type": "string",
+            "nullable": true
+          },
+          "observation": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskImpact": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvidenceResult": {
+        "type": "object",
+        "properties": {
+          "transactionPatternConsistency": {
+            "$ref": "#/components/schemas/EvidenceStrength"
+          },
+          "historicalBehaviorAlignment": {
+            "$ref": "#/components/schemas/EvidenceStrength"
+          },
+          "beneficiaryRisk": {
+            "$ref": "#/components/schemas/EvidenceStrength"
+          },
+          "velocityAnomaly": {
+            "$ref": "#/components/schemas/EvidenceStrength"
+          },
+          "evaluateNewBeneficiary": {
+            "$ref": "#/components/schemas/EvidenceStrength"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvidenceStrength": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "InvestigationResponse": {
+        "type": "object",
+        "properties": {
+          "investigationId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "analysisTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "evidence": {
+            "$ref": "#/components/schemas/EvidenceResult"
+          },
+          "falsePositiveScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "falsePositiveLikelihood": {
+            "$ref": "#/components/schemas/RiskLevel"
+          },
+          "confidenceScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "narrativeSummary": {
+            "type": "string",
+            "nullable": true
+          },
+          "alertRiskPosture": {
+            "type": "string",
+            "nullable": true
+          },
+          "evidenceMatrix": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvidenceMatrixItem"
+            },
+            "nullable": true
+          },
+          "behaviouralComparison": {
+            "$ref": "#/components/schemas/BehaviouralComparison"
+          },
+          "contradictions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "recommendedAction": {
+            "$ref": "#/components/schemas/RecommendedAction"
+          },
+          "confidenceJustification": {
+            "type": "string",
+            "nullable": true
+          },
+          "raw": {
+            "$ref": "#/components/schemas/LlmAnalysisResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LlmAnalysisResponse": {
+        "type": "object",
+        "properties": {
+          "narrativeSummary": {
+            "type": "string",
+            "nullable": true
+          },
+          "alertRiskPosture": {
+            "type": "string",
+            "nullable": true
+          },
+          "evidenceMatrix": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvidenceMatrixItem"
+            },
+            "nullable": true
+          },
+          "behaviouralComparison": {
+            "$ref": "#/components/schemas/BehaviouralComparison"
+          },
+          "contradictions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "recommendedAction": {
+            "$ref": "#/components/schemas/RecommendedAction"
+          },
+          "confidence": {
+            "$ref": "#/components/schemas/ConfidenceBlock"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecommendedAction": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "nullable": true
+          },
+          "rationale": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RiskLevel": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
 }

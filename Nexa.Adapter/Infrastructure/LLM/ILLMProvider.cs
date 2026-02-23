@@ -20,6 +20,6 @@ namespace Nexa.Adapter.Infrastructure.LLM
     }
     public interface ILLMResponseParser
     {
-        NexaLlmResponse Parse(string rawResponse);
+        T Parse<T>(string rawResponse);
     }
 }

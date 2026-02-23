@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Nexa.Adapter.Infrastructure.LLM;
 using Nexa.Adapter.Models;
 using Nexa.Adapter.Services;
 

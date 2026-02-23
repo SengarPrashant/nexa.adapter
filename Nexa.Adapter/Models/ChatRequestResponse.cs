@@ -9,6 +9,7 @@
 
     public class NexaLlmResponse
     {
+        public string? SessionId { get; set; }
         public string ResponseType { get; set; }
         public string Response { get; set; }
         public List<string> EvidenceReference { get; set; }
