@@ -44,6 +44,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<LLMOptions>(builder.Configuration.GetSection("LLM"));
 builder.Services.Configure<BankDataApiOptions>(builder.Configuration.GetSection(BankDataApiOptions.configSectionName));
 
+builder.Services.AddSingleton<ITool, AccountLookupTool>();
+builder.Services.AddSingleton<ITool, TransactionSearchTool>();
+builder.Services.AddSingleton<ITool, WeatherTool>();
+builder.Services.AddSingleton<ITool, FetchUrlContentTool>();
+
 LLMProviderFactory.Register(builder.Services, builder.Configuration);
 
 var app = builder.Build();

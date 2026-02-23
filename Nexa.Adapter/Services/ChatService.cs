@@ -8,12 +8,13 @@ namespace Nexa.Adapter.Services
     {
         public Task<NexaLlmResponse> ProcessChat(ChatRequest chat);
     }
-    public class ChatService(IMemoryCache memoryCache, ILLMProvider llmProvider, ILLMResponseParser responseParser, IPromptBuilder promptBuilder): IChatService
+    public class ChatService(IMemoryCache memoryCache, ILLMProvider llmProvider, ILLMResponseParser responseParser, IPromptBuilder promptBuilder, IEnumerable<ITool> tools) : IChatService
     {
         private readonly IMemoryCache _cache=memoryCache;
         private readonly ILLMProvider _llmProvider = llmProvider;
         private readonly ILLMResponseParser _llmParser = responseParser;
         private readonly IPromptBuilder _promptBuilder=promptBuilder;
+        private readonly IEnumerable<ITool> _tools = tools ?? new List<ITool>();
         public async Task<NexaLlmResponse> ProcessChat(ChatRequest chat)
         {
             try
@@ -26,11 +27,9 @@ namespace Nexa.Adapter.Services
                     message.Add(new LlmMessage { Role = Role.System, Content = systemPromt });
                 }
                 message.Add(new LlmMessage { Role = Role.User, Content = chat.Content });
-                var AiResponse = await _llmProvider.CompleteChat(message);
-
-                var nexaResponse = _llmParser.Parse<NexaLlmResponse>(AiResponse);
-                nexaResponse.SessionId = string.IsNullOrEmpty(chat.SessionId) ? Guid.NewGuid().ToString() : chat.SessionId.Trim();
-                return nexaResponse;
+                var AiResponse = await _llmProvider.CompleteChat(message, _tools);
+                AiResponse.SessionId = string.IsNullOrEmpty(chat.SessionId) ? Guid.NewGuid().ToString() : chat.SessionId.Trim();
+                return AiResponse;
             }
             catch (Exception ex)
             {

@@ -109,7 +109,7 @@ namespace Nexa.Adapter.Services
         {
             return $@"
                     SYSTEM ROLE:
-                    You are a senior banking risk analyst assistant operating in regulated investigation mode.
+                    You are a senior banking risk analyst assistant operating in regulated investigation mode. 
 
                     STRICT RULES:
                     - DO NOT invent facts
@@ -154,6 +154,9 @@ namespace Nexa.Adapter.Services
 
                     TASK:
                     Provide a regulatory-safe analytical response addressing the analyst question.
+                    
+                    ADDITIONAL INSTRUCTIONS:
+                    If you think you should use any available tool, please use.
 
                     OUTPUT FORMAT (MANDATORY JSON):
                     {{

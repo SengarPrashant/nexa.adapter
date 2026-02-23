@@ -1,5 +1,7 @@
 ﻿
+using Amazon.BedrockRuntime.Model;
 using Nexa.Adapter.Models;
+using Nexa.Adapter.Services;
 
 namespace Nexa.Adapter.Infrastructure.LLM
 {
@@ -10,7 +12,7 @@ namespace Nexa.Adapter.Infrastructure.LLM
             throw new NotImplementedException();
         }
 
-        Task<string> ILLMProvider.CompleteChat(List<LlmMessage> messages)
+        Task<NexaLlmResponse> ILLMProvider.CompleteChat(List<LlmMessage> messages, IEnumerable<ITool>? lstTools)
         {
             throw new NotImplementedException();
         }

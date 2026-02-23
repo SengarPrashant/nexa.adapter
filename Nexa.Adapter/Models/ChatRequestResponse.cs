@@ -14,5 +14,6 @@
         public string Response { get; set; }
         public List<string> EvidenceReference { get; set; }
         public string ConfidenceStatement { get; set; }
+        
     }
 }
