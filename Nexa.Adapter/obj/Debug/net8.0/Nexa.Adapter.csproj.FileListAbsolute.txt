@@ -166,3 +166,7 @@ C:\Users\Lenovo\DTCCAIHackathon\Nexa\Nexa.Adapter\obj\Debug\net8.0\refint\Nexa.A
 C:\Users\Lenovo\DTCCAIHackathon\Nexa\Nexa.Adapter\obj\Debug\net8.0\Nexa.Adapter.pdb
 C:\Users\Lenovo\DTCCAIHackathon\Nexa\Nexa.Adapter\obj\Debug\net8.0\Nexa.Adapter.genruntimeconfig.cache
 C:\Users\Lenovo\DTCCAIHackathon\Nexa\Nexa.Adapter\obj\Debug\net8.0\ref\Nexa.Adapter.dll
+D:\Hackethon\github\nexa.adapter\Nexa.Adapter\bin\Debug\net8.0\AWSSDK.BedrockRuntime.dll
+D:\Hackethon\github\nexa.adapter\Nexa.Adapter\bin\Debug\net8.0\AWSSDK.Core.dll
+D:\Hackethon\github\nexa.adapter\Nexa.Adapter\bin\Debug\net8.0\AWSSDK.SSO.dll
+D:\Hackethon\github\nexa.adapter\Nexa.Adapter\bin\Debug\net8.0\AWSSDK.SSOOIDC.dll

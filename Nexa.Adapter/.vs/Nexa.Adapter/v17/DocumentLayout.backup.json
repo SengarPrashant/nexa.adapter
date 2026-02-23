@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\nexainvestigationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\nexainvestigationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,28 +11,40 @@
       "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\controllers\\investigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:controllers\\investigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\promptbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\promptbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\infrastructure\\llm\\bedrockprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:infrastructure\\llm\\bedrockprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\infrastructure\\llm\\illmprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:infrastructure\\llm\\illmprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\infrastructure\\llm\\llmproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:infrastructure\\llm\\llmproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\nexainvestigationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\nexainvestigationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\promptbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\promptbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\services\\bankdataaggregator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:services\\bankdataaggregator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\controllers\\investigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:controllers\\investigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\models\\llmanalysisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:models\\llmanalysisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\infrastructure\\llm\\llmproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|solutionrelative:infrastructure\\llm\\llmproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87D1AB1A-A422-4BC8-9F92-6E32DF6B122B}|Nexa.Adapter.csproj|d:\\hackethon\\github\\nexa.adapter\\nexa.adapter\\infrastructure\\llm\\azureopenaiprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,51 +63,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NexaInvestigationOrchestrator.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\NexaInvestigationOrchestrator.cs",
-              "RelativeDocumentMoniker": "Services\\NexaInvestigationOrchestrator.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\NexaInvestigationOrchestrator.cs",
-              "RelativeToolTip": "Services\\NexaInvestigationOrchestrator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\ChatService.cs",
+              "RelativeDocumentMoniker": "Services\\ChatService.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\ChatService.cs",
+              "RelativeToolTip": "Services\\ChatService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T06:05:41.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BedrockProvider.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\BedrockProvider.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\LLM\\BedrockProvider.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\BedrockProvider.cs",
-              "RelativeToolTip": "Infrastructure\\LLM\\BedrockProvider.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAhwBIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T05:22:15.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ILLMProvider.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\ILLMProvider.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\LLM\\ILLMProvider.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\ILLMProvider.cs",
-              "RelativeToolTip": "Infrastructure\\LLM\\ILLMProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T05:10:20.256Z",
+              "WhenOpened": "2026-02-20T21:10:55.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PromptBuilder.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\PromptBuilder.cs",
+              "RelativeDocumentMoniker": "Services\\PromptBuilder.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\PromptBuilder.cs",
+              "RelativeToolTip": "Services\\PromptBuilder.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAG0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T05:59:54.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Alert.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Models\\Alert.cs",
+              "RelativeDocumentMoniker": "Models\\Alert.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Models\\Alert.cs",
+              "RelativeToolTip": "Models\\Alert.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:14:25.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NexaInvestigationOrchestrator.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\NexaInvestigationOrchestrator.cs",
+              "RelativeDocumentMoniker": "Services\\NexaInvestigationOrchestrator.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\NexaInvestigationOrchestrator.cs",
+              "RelativeToolTip": "Services\\NexaInvestigationOrchestrator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T02:26:17.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T04:51:23.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ChatController.cs",
               "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
               "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Controllers\\ChatController.cs",
               "RelativeToolTip": "Controllers\\ChatController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T21:08:32.798Z",
               "EditorCaption": ""
@@ -107,32 +141,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BedrockProvider.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\BedrockProvider.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\LLM\\BedrockProvider.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\BedrockProvider.cs",
+              "RelativeToolTip": "Infrastructure\\LLM\\BedrockProvider.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T05:22:15.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BankDataAggregator.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\BankDataAggregator.cs",
+              "RelativeDocumentMoniker": "Services\\BankDataAggregator.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\BankDataAggregator.cs",
+              "RelativeToolTip": "Services\\BankDataAggregator.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T02:28:04.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "InvestigationController.cs",
               "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Controllers\\InvestigationController.cs",
               "RelativeDocumentMoniker": "Controllers\\InvestigationController.cs",
               "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Controllers\\InvestigationController.cs",
               "RelativeToolTip": "Controllers\\InvestigationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T20:02:00.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatService.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\ChatService.cs",
-              "RelativeDocumentMoniker": "Services\\ChatService.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\ChatService.cs",
-              "RelativeToolTip": "Services\\ChatService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABoAAABAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "LlmAnalysisResponse.cs",
+              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Models\\LlmAnalysisResponse.cs",
+              "RelativeDocumentMoniker": "Models\\LlmAnalysisResponse.cs",
+              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Models\\LlmAnalysisResponse.cs",
+              "RelativeToolTip": "Models\\LlmAnalysisResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T21:10:55.02Z",
+              "WhenOpened": "2026-02-21T12:10:40.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "LLMProviderFactory.cs",
               "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\LLMProviderFactory.cs",
               "RelativeDocumentMoniker": "Infrastructure\\LLM\\LLMProviderFactory.cs",
@@ -140,38 +200,11 @@
               "RelativeToolTip": "Infrastructure\\LLM\\LLMProviderFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T06:03:18.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T06:03:18.575Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAC4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T04:51:23.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PromptBuilder.cs",
-              "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\PromptBuilder.cs",
-              "RelativeDocumentMoniker": "Services\\PromptBuilder.cs",
-              "ToolTip": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Services\\PromptBuilder.cs",
-              "RelativeToolTip": "Services\\PromptBuilder.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T05:59:54.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AzureOpenAIProvider.cs",
               "DocumentMoniker": "D:\\Hackethon\\github\\nexa.adapter\\Nexa.Adapter\\Infrastructure\\LLM\\AzureOpenAIProvider.cs",
               "RelativeDocumentMoniker": "Infrastructure\\LLM\\AzureOpenAIProvider.cs",
@@ -179,8 +212,7 @@
               "RelativeToolTip": "Infrastructure\\LLM\\AzureOpenAIProvider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T05:12:20.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T05:12:20.752Z"
             }
           ]
         }

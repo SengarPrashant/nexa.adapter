@@ -122,7 +122,8 @@
           },
           "alertTimeStamp": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           },
           "status": {
             "type": "string",
@@ -130,7 +131,8 @@
           },
           "riskScore": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "assignedTo": {
             "type": "string",
