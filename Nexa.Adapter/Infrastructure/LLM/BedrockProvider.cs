@@ -30,6 +30,7 @@ namespace Nexa.Adapter.Infrastructure.LLM
             Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY"),
             Environment.GetEnvironmentVariable("AWS_SESSION_TOKEN")
          );
+          
             _client = new AmazonBedrockRuntimeClient(
                 credentials,
                 Amazon.RegionEndpoint.USWest2

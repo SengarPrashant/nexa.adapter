@@ -13,7 +13,8 @@ namespace Nexa.Adapter.Controllers
         [HttpPost("analyze")]
         public async Task<IActionResult> Analyze(Alert alert)
         {
-            var result = await _investigationOrchestrator.AnalyzeAsync(new Alert() { Id = 1, CustomerId = 5513 });
+            // var result = await _investigationOrchestrator.AnalyzeAsync(new Alert() { Id = 1, CustomerId = 5513 });
+            var result = await _investigationOrchestrator.AnalyzeAsync(alert);
             return Ok(result);
         }
     }
