@@ -24,11 +24,7 @@ namespace Nexa.Adapter.Infrastructure.LLM
             Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY"),
             Environment.GetEnvironmentVariable("AWS_SESSION_TOKEN")
          );
-         //   var credentials = new SessionAWSCredentials(
-         //   Environment.GetEnvironmentVariable("ASIA6ICX642MNRBEVUUP"),
-         //   Environment.GetEnvironmentVariable("V+CyQnVzE/2cbcuhIFtzgChNextpA6Nl+l2Wvwx4"),
-         //   Environment.GetEnvironmentVariable("IQoJb3JpZ2luX2VjEBIaCXVzLWVhc3QtMiJGMEQCIELOJBtZfmQ+eBs/noH3qPLNSlQDfMepOjPL1ou57XteAiBYMVibHq6zLhIEj7jTrzm01dIynHetKQzRmpjJ/M526yrMAwjb//////////8BEAAaDDk3OTQzNzAyMDgyNCIMC1yuL5vmS8139e/lKqAD3GIUSmijIjp+ovzHbu+QeOdknE1Cw5oUvwMUwobUpZzS52bLAbI+F5aUIgCRKdi8VCiNXs+kDCknhQe84Ug8Q3HIIkJ0ZLJY06ubOuq0qubYA2mlk6K3d6cRUPBztRrvRaXJ+yPsDISFkPt39ocdYn9cdJy8ndpUztQdnHeo9txSqYlFOH2dQGNLkvHoXNQB4MUG/e1sZ/ML8mEoGhhQM8L/JZeMtJn1VvA4Nc12B9Vm3klVb43j1d4wvy30QZ3pxhoKQhilINJY5UIqp3ldxCwnyuP00Pkn3VLY7w1WlVg0QM7s5C1InXXUK1MwUA/PC/WGVQdTXkABJjD6V2fgBX7HiR4Cl0gX7ni8mgfc9y6KOamJ8YpWG0V8KhNJYaKAyXhwAHWfP5W18hqpqZpNjiCgWHP2gvtZkwb+IokTNbXkJXMit5knEbFvamtcW1KmJFA7WFMk+JY3HRc0EME4Gd/f9+xtsRpdyQdht8ndjV3aSWU6M/4BvRqU8N0ZWAS9FMBO6bbwnN9GxlLDthJCTeJBe2twIS7QbYwfo1DDGbsw1NDwzAY6pQHTm90GOT2jMVc4tAoz+816pO1TKIxKKargvyVlE6w9r6BaPMq524tiorPD50wWDutLOEiOyJjp9Xgua83CK7gp3T5NfHdD6Md+R5ImwgJWde3hxEHISMn0zriHegG08Pe+P6hqOKqZ03nF57W8W5rw2wX7SoVWoU8gZRAkAz7kaPH5ECKS1UMJYjphZS0oN1bC6qViWphfi+rHlXiDTmAWA8FNl5Q=")
-         //);
+          
             _client = new AmazonBedrockRuntimeClient(
                 credentials,
                 Amazon.RegionEndpoint.USWest2
